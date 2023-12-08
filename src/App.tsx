@@ -1,25 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Greet from "./components/Greet/greet";
+import { Application } from "./components/Application/application";
+import { Skills } from "./components/Skills/skills";
+import { Counter } from "./components/counter/counter";
+import { AppProviders } from "./providers/AppProviders";
+import { MuiMode } from "./components/mui/muiMode";
+import { CounterTwo } from "./components/CounterTwo/counterTwo";
+import { Users } from "./components/users/Users";
 
 function App() {
+  const skillsArr = ["HTML", "CSS", "JS", "React", "TypeScript"];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppProviders>
+      <div className="App">
+        {/* <Greet name="Puneet" />
+      <Application />
+      <Skills skills={skillsArr} /> */}
+        {/* <Counter /> */}
+        {/* <MuiMode /> */}
+        {/* <CounterTwo count={0} /> */}
+        <Users />
+      </div>
+    </AppProviders>
   );
 }
 
